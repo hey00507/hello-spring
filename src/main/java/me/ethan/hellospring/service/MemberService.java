@@ -2,7 +2,6 @@ package me.ethan.hellospring.service;
 
 import me.ethan.hellospring.domain.Member;
 import me.ethan.hellospring.repository.MemberRepository;
-import me.ethan.hellospring.repository.MemoryMemberRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
