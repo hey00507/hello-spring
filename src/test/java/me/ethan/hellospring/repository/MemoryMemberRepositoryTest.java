@@ -14,8 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 class MemoryMemberRepositoryTest {
 
-    @Autowired
-    MemberRepository memberRepository;
+    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
 
     @AfterEach
     void clear(){
