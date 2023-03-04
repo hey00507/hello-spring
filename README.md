@@ -3,7 +3,7 @@
 하루 두 시간 이상 투자하여, 모든 강의를 돌아보고 정리한다.
 ```
 1. [스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술](https://www.inflearn.com/course/스프링-입문-스프링부트)
-2. [스프링 핵심 원리 - 기본편  현재 강의](https://www.inflearn.com/course/스프링-핵심-원리-기본편) 
+2. [스프링 핵심 원리 - 기본편](https://www.inflearn.com/course/스프링-핵심-원리-기본편) 
 3. [모든 개발자를 위한 HTTP 웹 기본 지식](https://www.inflearn.com/course/http-웹-네트워크)
 4. [스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술](https://www.inflearn.com/course/스프링-mvc-1) 
 5. [스프링 MVC 2편 - 백엔드 웹 개발 활용 기술](https://www.inflearn.com/course/스프링-mvc-2)
@@ -13,4 +13,8 @@
 9. 실전 스프링 부트
 
 ---
-###  스프링 입문 (2/22 - )
+###  스프링 입문 (2/22 - 3/5) - 11days
+> Spring AOP, 기본 JPA 세팅 방법 관련해서 공부가 더 필요할듯
+> 아무리 회사쪽 일이 바빴어도, 수업듣고 진도나가는 속도가 너무 느렸으니 반성하자.
+
+###  스프링 핵심원리 기본편 (3/5 -)
