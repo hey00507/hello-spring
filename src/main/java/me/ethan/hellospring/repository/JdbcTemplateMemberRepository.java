@@ -13,7 +13,6 @@ import java.util.Optional;
 import java.util.HashMap;
 import java.util.Map;
 
-@Repository
 public class JdbcTemplateMemberRepository implements MemberRepository {
 
     private final JdbcTemplate jdbcTemplate;
