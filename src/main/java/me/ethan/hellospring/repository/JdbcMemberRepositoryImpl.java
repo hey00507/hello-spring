@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
 public class JdbcMemberRepositoryImpl implements MemberRepository {
 
 
@@ -157,8 +156,4 @@ public class JdbcMemberRepositoryImpl implements MemberRepository {
         DataSourceUtils.releaseConnection(conn, dataSource);
     }
 
-    @Override
-    public void clearStore() {
-
-    }
 }
