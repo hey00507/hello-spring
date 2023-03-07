@@ -1,7 +1,7 @@
-package me.ethan.hellospring;
+package me.ethan.hellospring.config;
 
 import me.ethan.hellospring.discount.DiscountPolicy;
-import me.ethan.hellospring.discount.FixDiscountPolicy;
+import me.ethan.hellospring.discount.RateDiscountPolicy;
 import me.ethan.hellospring.member.MemberRepository;
 import me.ethan.hellospring.member.MemberService;
 import me.ethan.hellospring.member.MemberServiceImpl;
@@ -23,7 +23,7 @@ public class CoreApplicationConfig {
 
     // 구현 클래스
     private DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
     private MemberRepository memberRepository() {
         return new MemoryMemberRepository();

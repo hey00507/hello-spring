@@ -1,13 +1,10 @@
 package me.ethan.hellospring.discount;
 
-import me.ethan.hellospring.CoreApplicationConfig;
 import me.ethan.hellospring.member.Grade;
 import me.ethan.hellospring.member.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class RateDiscountPolicyTest {
     DiscountPolicy discountPolicy = new RateDiscountPolicy();

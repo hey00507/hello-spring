@@ -1,15 +1,12 @@
 package me.ethan.hellospring.order;
 
-import me.ethan.hellospring.CoreApplicationConfig;
+import me.ethan.hellospring.config.CoreApplicationConfig;
 import me.ethan.hellospring.member.Grade;
 import me.ethan.hellospring.member.Member;
 import me.ethan.hellospring.member.MemberService;
-import me.ethan.hellospring.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceTest {
     MemberService memberService;

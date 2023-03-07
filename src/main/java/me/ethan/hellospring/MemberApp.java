@@ -1,9 +1,9 @@
 package me.ethan.hellospring;
 
+import me.ethan.hellospring.config.CoreApplicationConfig;
 import me.ethan.hellospring.member.Grade;
 import me.ethan.hellospring.member.Member;
 import me.ethan.hellospring.member.MemberService;
-import me.ethan.hellospring.member.MemberServiceImpl;
 
 public class MemberApp {
 
