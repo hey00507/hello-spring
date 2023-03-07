@@ -1,14 +1,24 @@
 package me.ethan.hellospring.member;
 
+import me.ethan.hellospring.CoreApplicationConfig;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService =new MemberServiceImpl();
-    
+    MemberService memberService;
+
+    @BeforeEach
+    public void dependencyInjection(){
+        CoreApplicationConfig coreApplicationConfig = new CoreApplicationConfig();
+        memberService=coreApplicationConfig.memberService();
+    }
+
+
+
     @Test
     void join(){
         //given

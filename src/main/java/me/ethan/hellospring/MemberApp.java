@@ -8,8 +8,11 @@ import me.ethan.hellospring.member.MemberServiceImpl;
 public class MemberApp {
 
     public static void main(String[] args) {
-        
-        MemberService memberService =new MemberServiceImpl();
+
+        CoreApplicationConfig coreApplicationConfig =new CoreApplicationConfig();
+
+        MemberService memberService = coreApplicationConfig.memberService();
+
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
