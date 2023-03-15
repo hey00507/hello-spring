@@ -25,4 +25,11 @@ public class OrderServiceImpl implements OrderService {
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
+
+    /**
+     * 싱글턴 테스트용 코드
+     */
+    public MemberRepository getMemberRepository(){
+        return this.memberRepository;
+    }
 }
