@@ -6,7 +6,9 @@ import me.ethan.hellospring.discount.RateDiscountPolicy;
 import me.ethan.hellospring.member.Member;
 import me.ethan.hellospring.member.MemberRepository;
 import me.ethan.hellospring.member.MemoryMemberRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
