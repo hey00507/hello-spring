@@ -1,13 +1,12 @@
 package me.ethan.hellospring.discount;
 
+import me.ethan.hellospring.annotation.MainDiscountPolicy;
 import me.ethan.hellospring.member.Grade;
 import me.ethan.hellospring.member.Member;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
-@Qu
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private static final int DISCOUNT_PERCENT = 10;
