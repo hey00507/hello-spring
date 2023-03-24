@@ -1,13 +1,18 @@
 package me.ethan.hellospring.lifecycle;
 
 
-public class NetworkClient {
+import lombok.ToString;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+@ToString
+public class NetworkClient implements InitializingBean, DisposableBean {
     private String url;
 
     public NetworkClient() {
         System.out.println("생성자 호출, url = " + url);
         connect();
-        call("초기화 연결 메시지");
+        call("초기화 연결 메시지 - 생성자 호출시엔 url 이 없음");
     }
 
     public void setUrl(String url) {
@@ -27,4 +32,25 @@ public class NetworkClient {
     public void disconnect() {
         System.out.println("close " + url);
     }
+
+
+    /**
+     * InitializingBean 의 afterPropertiesSet 은, 의존관계 주입이 끝나면 호출된다.
+     * afterPropertiesSet 과 destroy 는, 스프링 빈이라면, 무조건 호출된다.( 스프링 의존적이다.)
+     * 인터페이스를 구현하는 방법도 있지만, @PostConstruct, @PreDestroy 를 사용하는 방법도 있다. (인터페이스 구현은 거의 사용되지 않음)
+     */
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("NetworkClient.afterPropertiesSet");
+        System.out.println("return 되는 시점에, propertiesSet 이 호출되며, url 등록됨" + url);
+        connect();
+        call("초기화 연결 메시지");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("NetworkClient.destroy");
+        disconnect();
+    }
+
 }
