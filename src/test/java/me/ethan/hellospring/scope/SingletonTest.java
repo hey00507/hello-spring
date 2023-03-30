@@ -2,6 +2,8 @@ package me.ethan.hellospring.scope;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
 
@@ -25,6 +27,7 @@ public class SingletonTest {
 
     @Scope("singleton")
     static class SingletonBean{
+
         @PostConstruct
         public void init(){
             System.out.println("SingletonBean.init");
