@@ -8,8 +8,11 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.UUID;
 
+import static org.springframework.context.annotation.ScopedProxyMode.TARGET_CLASS;
+
 @Component
-@Scope(value = "request")
+@Scope(value = "request", proxyMode = TARGET_CLASS)
+// 가짜 proxyCode 를 만들어서, 주입함 (provider 든 proxy 든 진짜 조회가 필요한 시점까지 지연한다는 점에서 같다.)
 @Slf4j
 public class MyLogger {
 
